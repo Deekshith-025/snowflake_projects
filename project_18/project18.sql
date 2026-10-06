@@ -1,4 +1,11 @@
-use warehouse prj10_wh;
+create warehouse prj18_wh
+with
+    warehouse_size = 'x-small'
+    auto_suspend = 60
+    auto_resume = true
+    initially_suspended = true;
+use warehouse prj18_wh;
+
 create or replace database cleanroom_shared_db;
 create or replace schema cleanroom_shared_db.partner_telemetry;
 
